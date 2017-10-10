@@ -1,0 +1,373 @@
+body{
+    font-family: 'Libre Baskerville', serif;
+    color: #EEEBDC;
+    height: auto;
+    background: -moz-linear-gradient(-90deg, #210B03, #562F1F); 
+    background: -o-linear-gradient(-90deg, #210B03, #562F1F);   
+    background: -webkit-linear-gradient(-90deg, #210B03, #562F1F); 
+    background: -ms-linear-gradient(-90deg, #210B03, #562F1F);  
+}
+/*HEADER DE DJE*/
+#imgLogoAll {
+    height: 150px;
+    width: 150px;
+}
+
+header {
+    width: 95%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#iconesHeaderAll {
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-2x {
+    font-size: 1.5em;
+    padding: 2px;
+}
+
+.visible {
+    display: block;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+    background: white;
+    opacity: 0.7;
+    text-align: center;
+}
+
+nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    color: black;
+    margin: 15px;
+    font-size: large;
+}
+
+nav a:hover {
+    background: ;
+    color: #2d303a;
+}
+
+header button {
+    color: white;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/*CODE ZUZU AVANT
+header{
+    width: 85%;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div{
+    width: 50px;
+    height: 50px;
+    color: #EEEBDC;
+}
+
+#iconesHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fa-2x{
+    padding-right: 10px; 
+}
+
+#imgLogo{
+    font-family: 'Century Gothic';
+    width: 250px;
+    height: 140px;
+    text-align: center;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+
+/* MAIN ZUZU */
+#imgSlogan{
+    width: 80%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 150px;
+
+}
+
+#slogan > p{
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 400px;
+    background-color: rgba(238, 235, 220, 0.5);
+    border-radius: 3px;
+    margin-left: 10%;
+    margin-top: -250px;
+    position: absolute;
+    z-index: 1;
+}
+
+h1{
+    font-family: 'Georgia', cursive;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+h2{
+    font-family: 'Georgia', cursive;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+    font-family: 'Georgia', cursive;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#titreDroite{
+    text-align: right;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pCitation{
+    color: #EEEBDC;
+    font-size: 20px;
+}
+.ligneSeparatrice{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid #EEEBDC;
+    margin-top: 20px;
+    
+}
+
+.nouveautes{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: block;
+/*    display: flex;*/
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nouveautes > li {
+    display: inline-block;
+}
+
+.cdcoeur{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#imgGalerie{
+    width: 150px;
+    height: 230px;
+    box-shadow: 3px 3px 1px #EEEBDC;
+    margin: 5px;
+}
+
+#nav-shadow{
+    
+}
+
+.shadow{
+/*    box-shadow: 3px 3px 1px black;*/
+}
+
+li {
+    list-style: none;
+}
+
+#biographie{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EEEBDC;
+    font-family: 'Georgia';
+    text-align: justify;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: 1px 0px 3px black;
+    background-color: #663333;
+    border-radius: 3px;
+}
+
+#PhotoAuteur{
+    box-shadow: 1px 0px 3px black;
+    width: 400px;
+}
+
+#texteBio{
+    font-family: 'Georgia';
+    padding: 20px;
+    padding-right: 30px;
+    
+}
+
+#LienAutreLangue{
+    color: #EEEBDC;
+    display:block;
+    width: 390px;
+    margin:0 auto;
+    margin-bottom: 20px;
+    padding: 7px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+#LienAutreLangue:hover{
+    color: #663333;
+    font-weight: 700;
+    background-color: rgba(238, 235, 220, 0.7);
+    border-radius: 20px;
+    padding: 7px;
+}
+
+#basDePage{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+
+.cadreBDP{
+    width: 250px;
+    height: 150px;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 3px;
+    margin-top: 100px;
+    background-color: #663333;
+    transition-duration: 1s;
+    box-shadow: 1px 1px 4px 0px black;
+}
+
+.cadreBDP:hover{
+    background-color: rgba(238, 235, 220, 0.5);
+    color: #210B03;
+}
+/*FOOTER ZUZU*/
+footer{
+    text-align: center;
+    color: #EEEBDC;
+    font-size: 12px;
+    opacity: 0.5;
+    
+    
+/*-------------DESKTOP------------*/
+
+@media (min-width: 762px) {
+    #imgLogoAll {
+        height: 140px;
+        width: 140px;
+    }
+    #iconesHeaderAll {
+        display: flex;
+        flex-direction: row;
+    }
+    header {
+        width: 95%;
+        height: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav{
+        width: 15%;
+    }
+
+    .visible {
+        display: block;
+    }
+    .fa-2x {
+        font-size: 1.5em;
+        padding: 2px;
+    }
+}
+}
