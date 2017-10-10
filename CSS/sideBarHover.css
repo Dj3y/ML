@@ -1,0 +1,85 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+    height: 1000px;
+    color: #EEEBDC;
+    background: -moz-linear-gradient(-90deg, #210B03, #562F1F);
+    background: -o-linear-gradient(-90deg, #210B03, #562F1F);
+    background: -webkit-linear-gradient(-90deg, #210B03, #562F1F);
+    background: -ms-linear-gradient(-90deg, #210B03, #562F1F);
+}
+
+nav ul,
+nav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} 
+
+nav img {
+    position: relative;
+    display: table-cell;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+
+.menu:hover,
+nav.menu.expanded {
+    width: 200px;
+    overflow: visible;
+}
+
+.menu {
+    background: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    margin-left: 2%;
+    margin-top: 50px;
+    padding: 10px;
+    height: 450px;
+    width: 50px;
+    overflow: hidden;
+}
+
+
+.menu li > a {
+    position: relative;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #EEEBDC;
+    font-family: arial;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+
+}
+
+
+.menu .nav-text {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 355px;
+    padding-left: 20px;
+}
+
+.menu li:hover > a,
+nav.ment li.active > a,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
+}
+
