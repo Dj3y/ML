@@ -169,6 +169,7 @@ h2{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 2px 2px black;
 }
 
 h3{
@@ -185,6 +186,7 @@ h3{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 2px 2px black;
 }
 
 #pCitation{
@@ -195,28 +197,45 @@ h3{
     width: 45%;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 2px solid #EEEBDC;
+    border-bottom: 1px solid #EEEBDC;
     margin-top: 20px;
     
 }
 
-.nouveautes{
+#nouveautes{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    display: block;
-/*    display: flex;*/
+    display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-.nouveautes > li {
-    display: inline-block;
+li {
+    list-style: none;
 }
 
-.cdcoeur{
+.CouvQuiMonte{
+    width: 150px;
+    height: 230px;
+}
+
+.CouvQuiMonte:hover{
+    margin-top: -20px;
+    transition-duration: 0.5s;  
+}
+
+.CouvQuiMonte::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    box-shadow: 12px 10px 10px 2px black;
+}
+
+#cdcoeur{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -224,12 +243,22 @@ h3{
     text-transform: uppercase;
     padding-top: 50px;
     padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+#livresAuteur{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-around;
 }
 
 #imgGalerie{
@@ -237,18 +266,6 @@ h3{
     height: 230px;
     box-shadow: 3px 3px 1px #EEEBDC;
     margin: 5px;
-}
-
-#nav-shadow{
-    
-}
-
-.shadow{
-/*    box-shadow: 3px 3px 1px black;*/
-}
-
-li {
-    list-style: none;
 }
 
 #biographie{
@@ -281,7 +298,7 @@ li {
 #LienAutreLangue{
     color: #EEEBDC;
     display:block;
-    width: 390px;
+    width: 27%;
     margin:0 auto;
     margin-bottom: 20px;
     padding: 7px;
@@ -299,6 +316,80 @@ li {
     border-radius: 20px;
     padding: 7px;
 }
+/*     DEBUT CODE CAT SEARCH          */
+/*Search*/
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #210B03 url(http://nsm07.casimages.com/img/2017/10/12//17101211072313539015314933.png) no-repeat 6px center;
+/*	border: solid 1px #ccc;*/
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #210B03 ;
+	border-color: #EEEBDC;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+/* Demo 2 - Search */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #210B03;
+}
+#demo-2 input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #fff;
+	background-color: #210B03;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/*      FIN CODE CAT SEARCH    */
 
 #basDePage{
     width: 70%;
@@ -306,6 +397,7 @@ li {
     margin-right: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 200px;
 }
@@ -369,5 +461,6 @@ footer{
         font-size: 1.5em;
         padding: 2px;
     }
+
 }
 }
