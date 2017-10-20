@@ -8,18 +8,18 @@ body {
     background: -ms-linear-gradient(-90deg, #210B03, #562F1F);
 }
 
-/*-------------MOBILE------------*/
+/*-------------DESKTOP-----------*/
 
 /*-------------HEADER------------*/
 
 #imgLogoAll {
-    height: 70px;
-    width: 70px;
+    height: 140px;
+    width: 140px;
 }
 
 header {
     width: 95%;
-    height: 90px;
+    height: 140px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -33,7 +33,7 @@ header {
 }
 
 .fa-2x {
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 2px;
 }
 
@@ -48,10 +48,11 @@ nav {
     left: 0;
     width: 30%;
     height: 100%;
-    z-index: 1;
+    z-index: 5;
     background: white;
-    opacity: 0.3;
+    opacity: 0.7;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 nav .closebtn {
@@ -63,10 +64,12 @@ nav .closebtn {
 }
 
 nav a {
+    text-transform: uppercase;
     text-decoration: none;
     display: block;
     color: black;
-    margin: 10px;
+    margin: 15px;
+    font-size: large;
 }
 
 nav a:hover {
@@ -93,7 +96,7 @@ header button {
 /*--------------MAIN-------------*/
 
 h1 {
-    text-align: center;
+    margin-left: 100px;
     text-transform: uppercase;
 }
 
@@ -114,24 +117,24 @@ main > div {
 
 .imgLivres {
     width: 150px;
-    height: 200px;
+    height: 230px;
+    box-shadow: 3px 3px 1px #EEEBDC;
+    margin: 5px;
 }
 
 /*-------HOVER - CATEGORIES-------*/
+
 div ul,
 div li {
     margin: 0;
     padding: 0;
     list-style: none;
-} 
+}
 
 .menu img {
-    position: relative;
-    display: table-cell;
     width: 30px;
     height: 30px;
     padding: 10px;
-    text-align: center;
     vertical-align: middle;
     font-size: 25px;
 }
@@ -149,7 +152,7 @@ div.menu.expanded {
     margin-left: 2%;
     margin-top: 50px;
     padding: 5px;
-    height: 450px;
+    max-height: 450px;
     width: 50px;
     overflow: hidden;
     z-index: 100;
@@ -187,8 +190,8 @@ div.menu li.active > a,
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus,
-.no-touch .dashboard-page  div.dashboard-menu ul li:hover a,
-.dashboard-page  div.dashboard-menu ul li.active a {
+.no-touch .dashboard-page div.dashboard-menu ul li:hover a,
+.dashboard-page div.dashboard-menu ul li.active a {
     color: #EEEBDC;
     background-color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.3);
@@ -286,6 +289,7 @@ div.menu li.active > a,
 
 .effetLivres:hover > img,
 .effetLivres.hover > img {
+    margin: 0;
     opacity: 0.7;
 }
 
@@ -305,6 +309,20 @@ div.menu li.active > a,
     transition-delay: 0.1s;
 }
 
+/*--------RESEAUX SOCIAUX---------*/
+
+#resSoc {
+    /*
+    display: flex;
+    flex-direction: column;
+*/
+    position: fixed;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+}
+
 /*-------------FOOTER------------*/
 
 footer {
@@ -315,12 +333,12 @@ footer {
     margin: 2%;
 }
 
-/*-------------DESKTOP------------*/
+/*-------------MOBILE------------*/
 
-@media (min-width: 762px) {
+@media (min-width: 200px) and (max-width: 761px) {
     #imgLogoAll {
-        height: 140px;
-        width: 140px;
+        height: 70px;
+        width: 70px;
     }
     #iconesHeaderAll {
         display: flex;
@@ -328,7 +346,7 @@ footer {
     }
     header {
         width: 95%;
-        height: 140px;
+        height: 90px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -336,16 +354,62 @@ footer {
         align-items: center;
     }
 
-
     nav {
-        width: 15%;
+        width: 100%;
+        opacity: 1;
     }
 
     .visible {
         display: block;
     }
     .fa-2x {
-        font-size: 2em;
+        font-size: 1em;
         padding: 2px;
+    }
+
+    #divLivres {
+        margin-left: 50px;
+    }
+
+    .menu {
+        /*        position: absolute;*/
+        margin-left: 2%;
+        margin-top: 0;
+        top: 70px;
+    }
+    .menu img {
+        padding: 7px;
+    }
+
+    .menu:hover,
+    div.menu.expanded {
+        width: 50px;
+        overflow: hidden;
+    }
+
+    .menu li:hover > a,
+    div.menu li.active > a,
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus,
+    .dropdown-menu > .active > a,
+    .dropdown-menu > .active > a:hover,
+    .dropdown-menu > .active > a:focus,
+    .no-touch .dashboard-page div.dashboard-menu ul li:hover a,
+    .dashboard-page div.dashboard-menu ul li.active a {
+        color: none;
+        background-color: none;
+        background: none;
+    }
+    /*--------RESEAUX SOCIAUX---------*/
+    #resSoc {
+        /*
+    display: flex;
+    flex-direction: column;
+*/
+        position: fixed;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
     }
 }
