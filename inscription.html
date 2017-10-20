@@ -1,0 +1,184 @@
+<!--https://www.cssmatic.com/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>ML - Inscription</title>
+    <link rel="stylesheet" href="CSS/font-awesome.css">
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+<link rel="stylesheet" href="CSS/styleCat.css"> <!--    BONNE FEUILLE-->
+<!--   <link rel="stylesheet" href="CSS/style88et136.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet"> 
+</head>
+<body>
+   <header>
+       <button><i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+</button>
+       <div id="imgLogo"><img src="images/logofinalbeige.svg" alt="logo"></div>
+       <div id="iconesHeader">
+            <div><i class="fa fa-user fa-2x" aria-hidden="true"></i>
+</div>
+<!--            <div><i class="fa fa-search fa-2x" aria-hidden="true"></i></div>-->
+            <form id="demo-2">
+	        <input type="search" placeholder="Search">
+            </form>
+            
+            <div><i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+</div>
+       </div>
+       
+       <nav>
+           <button><i class="fa fa-2x fa-bars" aria-hidden="true"></i></button>
+           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Accueil</a> 
+            <a href="Apropos.html">A propos</a>
+            <a href="pageAll.html">Livres</a>
+            <a href="abonnements.html">Abonnements</a>
+            <a href="contact.html">Contact</a>
+            <a href="connexion.html">S'enregistrer/Connexion</a>
+            <a href="index.html">FR/</a>
+            <a href="indexEn.html">ENG</a> 
+        </nav>
+       </header>
+   <main>
+       
+          <h1>Inscription</h1>
+          
+          <div id="resSoc">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+          
+          <div id="contact">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos cupiditate delectus quis recusandae aliquam ipsam. Quo, enim illum excepturi nam voluptas vitae eveniet vero quasi nulla beatae, inventore voluptate ducimus!</div>
+          
+          <div id="formContact">
+              <form method="post" action="traitement.php">
+              
+                <p>
+                    <label>Nom*</label> : <input type="text" id="idnom" name="nom" />
+                </p>
+                 <p>
+                    <label>Prénom*</label> : <input type="text" id="idprenom" name="prenom" />
+                </p>
+                <p>
+                    <label>Adresse e-mail*</label> : <input type="email" id="idmail" name="email" />
+                </p>
+                
+                <p>
+                    <label>Date de naissance</label> : <input type="text" id="iddate" name="date" />
+                </p>
+                
+                <p>
+                    <label>Mot de passe*</label> : <input type="password" name="pwd" />
+                </p>
+                
+                 <p>
+                    <label>Répéter le mot de passe*</label> : <input type="password" name="pwd" />
+                </p>
+                <p>
+                    <label>Société</label> : <input type="text" id="société" name="société" />
+                </p>
+                
+                 <p>
+                    <label>Numéro de TVA</label> : <input type="text" id="idtva" name="tva" />
+                </p>
+                
+                <p>
+                    <label>Numéro de téléphone</label> : <input type="text" id="idtelephone" name="adresse" />
+                </p>
+                
+                <p>
+                    <label>Adresse*</label> : <input type="text" id="idadresse" name="adresse" />
+                </p>
+                
+                <p>
+                    <label>Numéro*</label> : <input type="text" id="idadresse" name="adresse" />
+                </p>
+                <p>
+                    <label>Code postal*</label> : <input type="text" id="idadresse" name="adresse" />
+                </p>
+                <p>
+                    <label>Ville*</label> : <input type="text" id="idadresse" name="adresse" />
+                </p>
+                <p>
+                    <label>Pays*</label> : <input type="text" id="idadresse" name="adresse" />
+                </p>
+                
+                <p>
+                    Choisissez votre abonnement* 
+                    <br>
+                    Ponctuel
+                    <input type="checkbox" name="abonnement" value="ponctuel">
+                    3 mois
+                    <input type="checkbox" name="abonnement" value="3mois">
+                    6 mois
+                    <input type="checkbox" name="abonnement" value="6mois">
+                    1 an
+                    <input type="checkbox" name="abonnement" value="1an">
+                    
+                </p>
+                
+                <p>
+                    Inscription à la Newsletter <br>
+                    oui
+                    <input type="checkbox" name="newsletter" value="oui" checked>
+                    non
+                    <input type="checkbox" name="newsletter" value="non">
+                </p>
+                
+             </form>
+          </div>
+          
+           <p id="champsObligatoire">champs obligatoire*</p>
+          
+          <input type="submit" id="submit" value="Valider"/>
+     
+       
+       <div class="ligneSeparatrice"></div>
+       
+       <div id="basDePage">
+           <div class="cadreBDP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+           <div class="cadreBDP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+           <div class="cadreBDP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+
+           
+       </div>
+       
+   </main>
+    <footer>
+        &copy; Interface3 2017 - WEB06 - Cat, Dje, Zuz'
+    </footer>
+    <script>
+        function toggleMenu(evt) {
+            //console.log(window.matchMedia('(min-width: 800px)')); // Retourne un objet contenant 2 keys : la media query et son résultat (Boolean) fa-times: affiche le x quand on ouvre le menu
+            if (window.matchMedia){
+                nav.classList.toggle('visible');
+                btn.children[0].classList.toggle('fa-bars');
+//                btn.children[0].classList.toggle('fa-times');
+                /*
+                if (btn.innerHTML == 'Open') {
+                    btn.innerHTML = 'Close';
+                } else {
+                    btn.innerHTML = 'Open';   
+                }
+                */
+            }
+        }
+        
+            
+        var btn = document.querySelector('header button');
+        var nav = document.querySelector('nav');
+        var links = document.querySelectorAll('nav a');
+
+        btn.addEventListener('click', toggleMenu);
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', toggleMenu);
+        }
+
+    </script>
+</body>
+</html>

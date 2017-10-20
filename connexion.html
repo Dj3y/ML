@@ -1,0 +1,126 @@
+<!--https://www.cssmatic.com/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>ML - Connexion</title>
+    <link rel="stylesheet" href="CSS/font-awesome.css">
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+<link rel="stylesheet" href="CSS/styleCat.css"> <!--    BONNE FEUILLE-->
+<!--   <link rel="stylesheet" href="CSS/style88et136.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet"> 
+</head>
+<body>
+   <header>
+       <button><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+
+       <div id="imgLogo"><img src="images/logofinalbeige.svg" alt="logo"></div>
+       <div id="iconesHeader">
+            <div><i class="fa fa-user fa-2x" aria-hidden="true"></i>
+</div>
+<!--            <div><i class="fa fa-search fa-2x" aria-hidden="true"></i></div>-->
+            <form id="demo-2">
+	        <input type="search" placeholder="Search">
+            </form>
+            
+            <div><i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+</div>
+       </div>
+       
+       <nav>
+           <button><i class="fa fa-2x fa-bars" aria-hidden="true"></i></button>
+           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Accueil</a> 
+            <a href="Apropos.html">A propos</a>
+            <a href="pageAll.html">Livres</a>
+            <a href="abonnements.html">Abonnements</a>
+            <a href="contact.html">Contact</a>
+            <a href="connexion.html">S'enregistrer/Connexion</a>
+            <a href="index.html">FR/</a>
+            <a href="indexEn.html">ENG</a> 
+        </nav>
+       </header>
+   <main>
+       
+          <h1>Connexion</h1>
+          
+          <div id="resSoc">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+          
+          <div id="blablaConnexion">Veuillez entrer votre adresse mail et votre mot de passe pour vous connecter.</div>
+          
+          <div id="blablaConnexion">
+              <form method="post" action="traitement.php">
+                <p>
+                    <label>Adresse e-mail</label> : <input type="email" name="email" />
+                </p>
+                 <p>
+                   
+                   
+                    <label>Mot de passe</label> : <input type="text" name="motdepasse" />
+                </p>
+                <p>
+                    Connexion automatique 
+                    <input type="checkbox" name="newsletter" value="oui" checked>
+                </p>
+                
+                <p>
+                   <a href="file://data2/commun/Stag/Web06/c.masure/Projet%20MOVING%20LIBRARY/Cat/inscription.html">Pas encore inscrit ?</a>
+                </p>
+                
+             </form>
+          </div>
+          
+          <input type="submit" id="connexion" value="Connexion"/>
+      
+       
+       <div class="ligneSeparatrice"></div>
+       
+       <div id="basDePage">
+           <div class="cadreBDP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+           <div class="cadreBDP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+           <div class="cadreBDP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+
+           
+       </div>
+       
+   </main>
+    <footer>
+        &copy; Interface3 2017 - WEB06 - Cat, Dje, Zuz'
+    </footer>
+    <script>
+        function toggleMenu(evt) {
+            //console.log(window.matchMedia('(min-width: 800px)')); // Retourne un objet contenant 2 keys : la media query et son résultat (Boolean) fa-times: affiche le x quand on ouvre le menu
+            if (window.matchMedia){
+                nav.classList.toggle('visible');
+                btn.children[0].classList.toggle('fa-bars');
+//                btn.children[0].classList.toggle('fa-times');
+                /*
+                if (btn.innerHTML == 'Open') {
+                    btn.innerHTML = 'Close';
+                } else {
+                    btn.innerHTML = 'Open';   
+                }
+                */
+            }
+        }
+        
+            
+        var btn = document.querySelector('header button');
+        var nav = document.querySelector('nav');
+        var links = document.querySelectorAll('nav a');
+
+        btn.addEventListener('click', toggleMenu);
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', toggleMenu);
+        }
+
+    </script>
+</body>
+</html>
