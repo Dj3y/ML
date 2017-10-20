@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML - Livre</title>
+</head>
+<body>
+    <!--https://www.cssmatic.com/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>ML - A propos</title>
+    <link rel="stylesheet" href="CSS/font-awesome.css">
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+<link rel="stylesheet" href="CSS/styleCat.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet"> 
+    
+    <script src="js/jquery-2.1.4.min.js"></script>
+    
+    <script>
+        // Menu accordéon
+        $(document).ready( function () {
+            
+        // On cache les sous-menus :
+            $(".navigation ul.subMenu").hide();
+            
+            // On sélectionne tous les items de liste portant la classe "toggleSubMenu" 
+            //et on remplace l'élément span qu'ils contiennent par un lien :
+            $(".navigation li.toggleSubMenu span").each( function () {
+                
+                //On stocke le contenu du span dans une variable
+                var TexteSpan = $(this).text();
+                $(this).replaceWith('<a href="" title="Afficher le sous-menu">'  + TexteSpan + '<\/a>') ;
+            } ) ; 
+            
+            
+            // On modifie l'évènement "click" sur les liens 
+            //dans les items de liste qui portent la classe "toggleSubMenu" :
+                $(".navigation li.toggleSubMenu > a").click( function () {
+                    
+            // Si le sous-menu était déjà ouvert, on le referme
+                    if ($(this).next("ul.subMenu:visible").length != 0) {
+                            $(this).next("ul.subMenu").slideUp("normal");
+                        }
+                
+            // Si le sous-menu est caché, on ferme les autres et on l'affiche :
+                    else {
+                            $(".navigation ul.subMenu").slideUp("normal");
+                            $(this).next("ul.subMenu").slideDown("normal");
+                        }
+                        
+            // On empêche le navigateur de suivre le lien :
+                    return false;
+                 });    
+
+        });
+        
+    </script>  
+</head>
+<body>
+   <header>
+       <button><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+       <div id="imgLogo"><img src="images/logofinalbeige.svg" alt="logo"></div>
+       <div id="iconesHeader">
+            <div><i class="fa fa-user fa-2x" aria-hidden="true"></i>
+</div>
+<!--            <div><i class="fa fa-search fa-2x" aria-hidden="true"></i></div>-->
+            <form id="demo-2">
+	        <input type="search" placeholder="Search">
+            </form>
+            
+            <div><i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+</div>
+       </div>
+       
+       <nav>
+           <button><i class="fa fa-2x fa-bars" aria-hidden="true"></i></button>
+           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Accueil</a> 
+            <a href="Apropos.html">A propos</a>
+            <a href="pageAll.html">Livres</a>
+            <a href="abonnements.html">Abonnements</a>
+            <a href="contact.html">Contact</a>
+            <a href="connexion.html">S'enregistrer/Connexion</a>
+            <a href="index.html">FR/</a>
+            <a href="indexEn.html">ENG</a> 
+        </nav>
+       </header>
+   <main id="pagelivre">
+       
+          <h1>Livre</h1>
+          
+          <div id="resSoc">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+          
+          <div id="cadrelivre">
+          
+          <div class="container">
+	        <div class="avatar">
+		    <a href="https://codepen.io/MarioDesigns/">
+			<img id="imgLivre" src="images/harry-potter,-tome-1---harry-potter-a-l-ecole-des-sorciers-383225.jpg" alt="couverture livre" style="height: 425px; ">
+			</a>
+	</div>
+    </div>
+          
+          <div id="infoLivre">
+              <h3>Auteur</h3>
+              
+<!--              Rating Stars-->
+              <section class='rating-widget'>
+              <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='WOW!!!' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+             </section>
+             
+<!--             Checkbox-->
+              <div class="checkbox">
+    <form action="#" id="formLivre">
+  <p class="disponibilite">
+    <input type="checkbox" id="test1" />
+    <label for="test1">Disponible</label>
+  </p>
+  <p class="disponibilite">
+    <input type="checkbox" id="test2" checked="checked" />
+    <label for="test2">Réservé</label>
+  </p>
+  <p class="disponibilite">
+    <input type="checkbox" id="test3" checked="checked" />
+    <label for="test3">Indisponible</label>
+  </p>
+</form>
+</div>
+              <p>Nombre d'exemplaires disponible</p>
+            
+        <div id="encadrementBoutons"> 
+              <p class="boutonsLivre">Louer</p>
+              <p class="boutonsLivre">Réserver</p>
+        </div>       
+              
+          </div>
+          </div>
+          
+          
+          
+         <div id="menuAccordeon"> <ul class="navigation">
+  <li class="toggleSubMenu"><span>Résumé</span>
+      <ul class="subMenu">
+      <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </ul>
+  </li>
+  <li class="toggleSubMenu"><span>Auteur</span>
+    <ul class="subMenu">
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+    </ul>
+    </li>
+    <li class="toggleSubMenu"><span>Avis lecteur</span>
+      <ul class="subMenu">
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+      </ul>
+    </li>
+</ul>
+         </div>
+          
+          
+          
+       
+   </main>
+    <footer>
+        &copy; Interface3 2017 - WEB06 - Cat, Dje, Zuz'
+    </footer>
+    
+    <script>
+        function toggleMenu(evt) {
+            //console.log(window.matchMedia('(min-width: 800px)')); // Retourne un objet contenant 2 keys : la media query et son résultat (Boolean) fa-times: affiche le x quand on ouvre le menu
+            if (window.matchMedia){
+                nav.classList.toggle('visible');
+                btn.children[0].classList.toggle('fa-bars');
+//                btn.children[0].classList.toggle('fa-times');
+                /*
+                if (btn.innerHTML == 'Open') {
+                    btn.innerHTML = 'Close';
+                } else {
+                    btn.innerHTML = 'Open';   
+                }
+                */
+            }
+        }
+        
+            
+        var btn = document.querySelector('header button');
+        var nav = document.querySelector('nav');
+        var links = document.querySelectorAll('nav a');
+
+        btn.addEventListener('click', toggleMenu);
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', toggleMenu);
+        }
+
+        function closeNav (){
+            
+        };
+        
+        
+//        Rating Stars
+        
+         $(document).ready(function(){
+  
+  /* 1. Visualizing things on Hover - See next part for action on click */
+  $('#stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+  
+  
+  /* 2. Action to perform on click */
+  $('#stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    // JUST RESPONSE (Not needed)
+    var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+    var msg = "";
+    if (ratingValue > 1) {
+        msg = "Thanks! You rated this " + ratingValue + " stars.";
+    }
+    else {
+        msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
+    }
+    responseMessage(msg);
+    
+  });
+  
+  
+});
+
+
+function responseMessage(msg) {
+  $('.success-box').fadeIn(200);  
+  $('.success-box div.text-message').html("<span>" + msg + "</span>");
+}
+    </script>
+</body>
+</html>
+</body>
+</html>
