@@ -4,10 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
     <title>ML - Profil</title>
+    
     <link rel="stylesheet" href="CSS/font-awesome.css">
     <link rel="stylesheet" href="CSS/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/normalize.css">
-<link rel="stylesheet" href="CSS/styleCat.css">
+   
+   <link rel="stylesheet" href="CSS/essaiTabs.css">
+   <link rel="stylesheet" href="CSS/styleCat.css">
+   
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet"> 
 </head>
 <body>
@@ -36,29 +40,35 @@
             <a href="abonnements.html">Abonnements</a>
             <a href="contact.html">Contact</a>
             <a href="connexion.html">S'enregistrer/Connexion</a>
-            <a href="index.html">FR/</a>
-            <a href="indexEn.html">ENG</a> 
+            <div id="frEng">
+                    <a href="index.html">FR</a>
+                    <a href="indexEn.html">ENG</a>
+                </div>
         </nav>
        </header>
        
-       <main>
+       <main id="profil">
            <h1>Profil</h1>
           
+
           <div id="resSoc">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
                 <i class="fa fa-twitter" aria-hidden="true"></i>
                 <i class="fa fa-instagram" aria-hidden="true"></i>
             </div>
             
-            <div id="profilUtilisateur">
-            <p class="boutonsProfil">Coordonnées</p>
-            <p class="boutonsProfil">Commandes</p>
-            <p class="boutonsProfil">Paiement</p>
-            <p class="boutonsProfil">Stats</p>
-            <p class="boutonsProfil">Paramètres</p>
-           </div>
-           
-           <div id="coordonnees">
+      
+      <div class="sidebar-tabs-menu-1">
+  <label for="sidebar-tabs-menu-1-tab-1" class="tab">
+    
+    <input type="radio" name="sidebar-tabs-menu-1-tab" id="sidebar-tabs-menu-1-tab-1" value="sidebar-tabs-menu-1-recent" class="display-none" checked>
+    
+    <div class="title">Coordonnées</div>
+    <div class="reveal">
+      
+      <div class="lay-frame">
+        <div class="underlay">
+          <div id="coordonnees">
            <div class="adresse">
                <h3>Adresse de livraison </h3>
                
@@ -76,6 +86,177 @@
                <p>Code postal</p>
            </div>
            </div>
+        </div>
+        
+      </div>
+      
+      
+  
+    </div>
+  </label>
+  
+  <label for="sidebar-tabs-menu-1-tab-2" class="tab">
+    
+    <input type="radio" name="sidebar-tabs-menu-1-tab" id="sidebar-tabs-menu-1-tab-2" value="sidebar-tabs-menu-1-popular" class="display-none">
+    
+    <div class="title not-first">Commandes</div>
+    <div class="reveal">
+      
+      <div class="lay-frame">
+        <div class="underlay">
+          <div id="coordonnees">
+           <div class="adresse">
+               <h3>Dernière commande </h3>
+               
+               <p>Votre dernière commande date du DATE</p>
+               <p>Statut = En cours de livraison</p>
+           </div>
+              
+
+              <div class="adresse">
+               <h3>Commandes </h3>
+               
+               <p>Aucune commande n'a été passée pour le moment</p>
+           </div>
+           </div>
+        </div>
+        
+      </div>
+    </div>
+  </label>
+  
+  <label for="sidebar-tabs-menu-1-tab-3" class="tab">
+    
+    <input type="radio" name="sidebar-tabs-menu-1-tab" id="sidebar-tabs-menu-1-tab-3" value="sidebar-tabs-menu-1-popular" class="display-none">
+    
+    <div class="title not-first1">Paiements</div>
+    <div class="reveal">
+      
+      <div class="lay-frame">
+        <div class="underlay">
+          <div id="coordonnees">
+           <div class="adresse">
+               <h3>Abonnement </h3>
+               
+               <p>Vous avez choisi l'Abonnement FORMULE</p>
+               <p>Votre dernier paiement date du DATE</p>
+               <p>Votre abonnement arrivera à expiration le DATE</p>
+           </div>
+              
+
+              <div class="adresse">
+               <h3>Coordonnées de paiement </h3>
+               
+               <p>Mr Durant</p>
+               <p>Visa</p>
+               <p>22502-22566-630</p>
+           </div>
+           </div>
+        </div>
+        
+      </div>
+    </div>
+  </label>
+  
+  <label for="sidebar-tabs-menu-1-tab-4" class="tab">
+    
+    <input type="radio" name="sidebar-tabs-menu-1-tab" id="sidebar-tabs-menu-1-tab-4" value="sidebar-tabs-menu-1-popular" class="display-none">
+    
+    <div class="title not-first2">Stats</div>
+    <div class="reveal">
+      
+      <div class="lay-frame">
+        <div class="underlay">
+          <div id="coordonnees">
+           <div class="adresse">
+               <h3>Stats </h3>
+               
+               <p>Blabla</p>
+               <p>Blibli</p>
+               <p>Blop</p>
+           </div>
+              
+
+              <div class="adresse">
+               <h3>Stats </h3>
+               
+               <p>En cours.</p>
+               <p>En cours..</p>
+               <p>En cours...</p>
+           </div>
+           </div>
+        </div>
+        
+      </div>
+    </div>
+  </label>
+  
+  <label for="sidebar-tabs-menu-1-tab-5" class="tab">
+    
+    <input type="radio" name="sidebar-tabs-menu-1-tab" id="sidebar-tabs-menu-1-tab-5" value="sidebar-tabs-menu-1-popular" class="display-none">
+    
+    <div class="title not-first3">Paramètres</div>
+    <div class="reveal">
+      
+      <div class="lay-frame">
+        <div class="underlay">
+          <div id="coordonnees">
+           <div class="adresse">
+               <h3>Adresse de livraison </h3>
+               
+               <p>Mr Durant</p>
+               <p>Adresse</p>
+               <p>Code postal</p>
+           </div>
+              
+
+              <div class="adresse">
+               <h3>Adresse principale </h3>
+               
+               <p>Mr Durant</p>
+               <p>Adresse</p>
+               <p>Code postal</p>
+           </div>
+           </div>
+        </div>
+        
+      </div>
+    </div>
+  </label>
+</div>
        </main>
+       <footer>
+        &copy; Interface3 2017 - WEB06 - Cat, Dje, Zuz'
+    </footer>
+    <script>
+        function toggleMenu(evt) {
+            //console.log(window.matchMedia('(min-width: 800px)')); // Retourne un objet contenant 2 keys : la media query et son résultat (Boolean) fa-times: affiche le x quand on ouvre le menu
+            if (window.matchMedia){
+                nav.classList.toggle('visible');
+                btn.children[0].classList.toggle('fa-bars');
+//                btn.children[0].classList.toggle('fa-times');
+                /*
+                if (btn.innerHTML == 'Open') {
+                    btn.innerHTML = 'Close';
+                } else {
+                    btn.innerHTML = 'Open';   
+                }
+                */
+            }
+        }
+        
+            
+        var btn = document.querySelector('header button');
+        var nav = document.querySelector('nav');
+        var links = document.querySelectorAll('nav a');
+
+        btn.addEventListener('click', toggleMenu);
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', toggleMenu);
+        }
+
+    </script>
+       
 </body>
 </html>
