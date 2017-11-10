@@ -93,16 +93,16 @@ header button {
     margin-left: 50px;
 }
 
+#frEng{
+    display: flex;
+    justify-content: center;
+}
 /*--------------MAIN-------------*/
 
 h1 {
-    margin-left: 100px;
+    margin-left: 150px;
+    margin-top: 0;
     text-transform: uppercase;
-}
-
-main > div {
-    display: flex;
-    flex-direction: row;
 }
 
 #divLivres {
@@ -120,6 +120,10 @@ main > div {
     height: 230px;
     box-shadow: 3px 3px 1px #EEEBDC;
     margin: 5px;
+}
+
+a{
+    color: white;
 }
 
 /*-------HOVER - CATEGORIES-------*/
@@ -150,12 +154,12 @@ div.menu.expanded {
     background: rgba(255, 255, 255, 0.3);
     position: fixed;
     margin-left: 2%;
-    margin-top: 50px;
     padding: 5px;
-    max-height: 450px;
+    max-height: 550px;
     width: 50px;
     overflow: hidden;
     z-index: 100;
+    top: 185px;
 }
 
 
@@ -378,7 +382,7 @@ footer {
         top: 70px;
     }
     .menu img {
-        padding: 7px;
+        padding: 3px;
     }
 
     .menu:hover,
