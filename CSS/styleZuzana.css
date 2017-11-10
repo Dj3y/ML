@@ -5,7 +5,12 @@ body{
     background: -moz-linear-gradient(-90deg, #210B03, #562F1F); 
     background: -o-linear-gradient(-90deg, #210B03, #562F1F);   
     background: -webkit-linear-gradient(-90deg, #210B03, #562F1F); 
-    background: -ms-linear-gradient(-90deg, #210B03, #562F1F);  
+    background: -ms-linear-gradient(-90deg, #210B03, #562F1F); 
+/*
+    background-color: #562F1F;
+    background-image: url('../images/fond_livre_ML5.png');
+    background-repeat: repeat;
+*/
 }
 /*HEADER DE DJE*/
 #imgLogoAll {
@@ -14,8 +19,8 @@ body{
 }
 
 header {
-    width: 95%;
-    height: 200px;
+    width: 80%;
+    height: 180px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -31,6 +36,7 @@ header {
 .fa-2x {
     font-size: 1.5em;
     padding: 2px;
+    text-shadow: 1px 2px 2px black;
 }
 
 .visible {
@@ -87,47 +93,15 @@ header button {
     font-size: 36px;
     margin-left: 50px;
 }
-/*CODE ZUZU AVANT
-header{
-    width: 85%;
-    height: 150px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+
+#frEng{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
-header > div{
-    width: 50px;
-    height: 50px;
-    color: #EEEBDC;
-}
+/* Fin header Dje */
 
-#iconesHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.fa-2x{
-    padding-right: 10px; 
-}
-
-#imgLogo{
-    font-family: 'Century Gothic';
-    width: 250px;
-    height: 140px;
-    text-align: center;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-*/
-
-/* MAIN ZUZU */
+/***** MAIN ZUZU ******/
 #imgSlogan{
     width: 80%;
     height: 500px;
@@ -155,11 +129,10 @@ h1{
     font-family: 'Georgia', cursive;
     color: #EEEBDC;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
 }
 
 h2{
@@ -220,6 +193,7 @@ li {
 .CouvQuiMonte{
     width: 150px;
     height: 230px;
+    margin-right: 5px;
 }
 
 .CouvQuiMonte:hover{
@@ -266,7 +240,25 @@ li {
     height: 230px;
     box-shadow: 3px 3px 1px #EEEBDC;
     margin: 5px;
+    transition-duration: 0.5s;
 }
+
+#imgGalerieLivres{
+    width: 150px;
+    height: 230px;
+    box-shadow: 3px 3px 1px #EEEBDC;
+    margin: 5px;
+    transition-duration: 0.5s;
+}
+
+#imgGalerieLivres:hover{
+    width: 155px;
+    height: 235px;
+    box-shadow: 0px 8px 20px #EEEBDC;
+    
+}
+
+/************PAGE AUTEUR***********/
 
 #biographie{
     width: 80%;
@@ -298,7 +290,8 @@ li {
 #LienAutreLangue{
     color: #EEEBDC;
     display:block;
-    width: 27%;
+    width: 19%;
+    text-align: center;
     margin:0 auto;
     margin-bottom: 20px;
     padding: 7px;
@@ -316,6 +309,9 @@ li {
     border-radius: 20px;
     padding: 7px;
 }
+
+/************Fin page auteur***********/
+
 /*     DEBUT CODE CAT SEARCH          */
 /*Search*/
 input {
@@ -336,6 +332,7 @@ input::-webkit-search-cancel-button {
 input[type=search] {
 	background: #210B03 url(http://nsm07.casimages.com/img/2017/10/12//17101211072313539015314933.png) no-repeat 6px center;
 /*	border: solid 1px #ccc;*/
+    border: none;
 	padding: 9px 10px 9px 32px;
 	width: 55px;
 	
@@ -391,6 +388,24 @@ input::-webkit-input-placeholder {
 
 /*      FIN CODE CAT SEARCH    */
 
+/*--------RESEAUX SOCIAUX---------*/
+
+#resSoc {
+    /*
+    display: flex;
+    flex-direction: column;
+*/
+    position: fixed;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+}
+
+/*---------------------------*/
+
+
+/******** Bas de page **********/
 #basDePage{
     width: 70%;
     margin-left: auto;
@@ -421,20 +436,26 @@ input::-webkit-input-placeholder {
     background-color: rgba(238, 235, 220, 0.5);
     color: #210B03;
 }
-/*FOOTER ZUZU*/
+
+.cadreBDP > h2{
+    text-align: center;
+    margin-top: 5px;
+}
+
+/*********FOOTER ZUZU**********/
 footer{
     text-align: center;
     color: #EEEBDC;
     font-size: 12px;
     opacity: 0.5;
     
-    
-/*-------------DESKTOP------------*/
+}
+/*-------------MOBILE------------*/
 
-@media (min-width: 762px) {
+@media (min-width: 200px) and (max-width: 761px) {
     #imgLogoAll {
-        height: 140px;
-        width: 140px;
+        height: 70px;
+        width: 70px;
     }
     #iconesHeaderAll {
         display: flex;
@@ -442,25 +463,299 @@ footer{
     }
     header {
         width: 95%;
-        height: 140px;
+        height: 90px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+/*
+        background-color: black;
+        position: fixed;
+        z-index: 8;
+*/
     }
 
     nav{
-        width: 15%;
+        width: 100%;
+        opacity: 1;
     }
 
     .visible {
         display: block;
     }
     .fa-2x {
-        font-size: 1.5em;
+        font-size: 1em;
         padding: 2px;
     }
 
+    /***** MAIN ZUZU ******/
+#imgSlogan{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 150px;
+
 }
+
+#imgSlogan > img{
+    width: 100%;
+    margin-top: 5px;
 }
+
+#slogan > p{
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 30px;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(238, 235, 220, 0);
+    border-radius: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -230px;
+    position: absolute;
+    z-index: 1;
+}
+
+#display{
+    margin-left: auto;    
+    margin-right: auto;    
+}
+    
+    ul#simpleQuote li{
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+    
+    #nouveautes{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+}
+
+h2{
+    text-align: left;
+    font-family: 'Georgia', cursive;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 2px 2px black;
+}
+
+#titreDroite{
+    text-align: left;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 2px 2px black;
+}    
+    
+#imgGalerie{
+    width: 120px;
+    height: 200px;
+    box-shadow: 3px 3px 1px #EEEBDC;
+    margin: 5px;
+    transition-duration: 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+#nouveautes{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+}    
+
+.CouvQuiMonte{
+    width: 150px;
+    height: 230px;
+    margin-bottom: 10px;
+}
+
+.CouvQuiMonte:hover{
+    margin-top: 0;
+    transition-duration: 0.5s;  
+}
+
+.CouvQuiMonte::after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    box-shadow: 12px 10px 10px 2px black;
+}
+
+#cdcoeur{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EEEBDC;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/************PAGE AUTEUR***********/
+
+#biographie{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EEEBDC;
+    font-family: 'Georgia';
+    text-align: justify;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 1px 0px 3px black;
+    background-color: #663333;
+    border-radius: 3px;
+}
+
+#PhotoAuteur{
+    box-shadow: 1px 0px 3px black;
+    width: 100%;
+}
+
+#texteBio{
+    font-family: 'Georgia';
+    padding: 20px;
+    padding-right: 30px;
+    
+}
+
+#LienAutreLangue{
+    color: #EEEBDC;
+    display:block;
+    width: 80%;
+    text-align: center;
+    margin:0 auto;
+    margin-bottom: 20px;
+    padding: 7px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-property: all;
+    transition-duration: 1s;
+}
+    
+/*-----------DEBUT CODE CAT SEARCH ---------*/
+/*Search*/
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #210B03 url(http://nsm07.casimages.com/img/2017/10/12//17101211072313539015314933.png) no-repeat 6px center;
+/*	border: solid 1px #ccc;*/
+    border: none;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #210B03 ;
+	border-color: #EEEBDC;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+/* Demo 2 - Search */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #210B03;
+}
+#demo-2 input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #fff;
+	background-color: #210B03;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/*      FIN CODE CAT SEARCH    */
+    
+/*--------RESEAUX SOCIAUX---------*/
+
+    #resSoc {
+        /*
+        display: flex;
+        flex-direction: column;
+    */
+        position: fixed;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        font-size: 25px; 
+    }
+    
+    
+    }
